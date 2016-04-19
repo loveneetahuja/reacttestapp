@@ -9,7 +9,7 @@ import SecondPage from './components/secondpage.js';
 render((
 
 	<Router history={browserHistory}>
-		<Route path ="/" component={MainApp} name="home">
+		<Route component={MainApp} name="home">
 			<Route path="/" component={Home} name="homepage" />
 			<Route path="/second" component={SecondPage} name="secondpage" />
 		</Route>
