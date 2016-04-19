@@ -4,7 +4,10 @@
   "description": "front end test app for react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "webpack-dev-server --inline --content-base public --history-api-fallback --port=8000",
+    "start:prod": "webpack && node server.js"
   },
   "author": "loveneet",
   "license": "ISC",
